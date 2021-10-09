@@ -21,12 +21,14 @@ final class SignUpViewController: UIViewController {
         guard let mail = mailAddressTextField.text,
               let password = passWordTextField.text else { return }
         FirebaseUtil().signUp(email: mail,
-                              password: password) { result in
+                              password: password) { [weak self] result in
             switch result {
             case .failure(let error):
                 print(error)
             case .success():
-                print("成功")
+                let testVC = CloudFireStoreTestViewController.instantiate()
+                testVC.modalPresentationStyle = .fullScreen
+                self?.present(testVC, animated: true, completion: nil)
             }
         }
     }

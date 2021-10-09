@@ -18,7 +18,18 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction private func loginButtonDidTap(_ sender: Any) {
-        
+        guard let email = mainAddressTextField.text,
+              let password = passWordTextField.text else { return }
+        FirebaseUtil().logIn(email: email, password: password) { [weak self] result in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success():
+                let testVC = CloudFireStoreTestViewController.instantiate()
+                testVC.modalPresentationStyle = .fullScreen
+                self?.present(testVC, animated: true, completion: nil)
+            }
+        }
     }
     
 }
