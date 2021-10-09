@@ -18,6 +18,7 @@
 		7584853A2711BFB100B1D4C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758485392711BFB100B1D4C9 /* SignUpViewController.swift */; };
 		7584853C2711BFC500B1D4C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584853B2711BFC500B1D4C9 /* LoginViewController.swift */; };
 		7584853E2711C16A00B1D4C9 /* FirebaseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584853D2711C16A00B1D4C9 /* FirebaseUtil.swift */; };
+		758485402711C88600B1D4C9 /* CloudFireStoreTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584853F2711C88600B1D4C9 /* CloudFireStoreTestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		758485392711BFB100B1D4C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		7584853B2711BFC500B1D4C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7584853D2711C16A00B1D4C9 /* FirebaseUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtil.swift; sourceTree = "<group>"; };
+		7584853F2711C88600B1D4C9 /* CloudFireStoreTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudFireStoreTestViewController.swift; sourceTree = "<group>"; };
 		D90F89FA49CC995DDF0641E5 /* Pods-FirebaseCloudFireStorePractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseCloudFireStorePractice.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseCloudFireStorePractice/Pods-FirebaseCloudFireStorePractice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				758485392711BFB100B1D4C9 /* SignUpViewController.swift */,
 				7584853B2711BFC500B1D4C9 /* LoginViewController.swift */,
 				7584853D2711C16A00B1D4C9 /* FirebaseUtil.swift */,
+				7584853F2711C88600B1D4C9 /* CloudFireStoreTestViewController.swift */,
 			);
 			path = FirebaseCloudFireStorePractice;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75093DEE27118ED10010787D /* ViewController.swift in Sources */,
+				758485402711C88600B1D4C9 /* CloudFireStoreTestViewController.swift in Sources */,
 				75093DEA27118ED10010787D /* AppDelegate.swift in Sources */,
 				7584853A2711BFB100B1D4C9 /* SignUpViewController.swift in Sources */,
 				7584853C2711BFC500B1D4C9 /* LoginViewController.swift in Sources */,
