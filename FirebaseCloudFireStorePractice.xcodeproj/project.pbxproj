@@ -15,6 +15,9 @@
 		75093DF327118ED50010787D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75093DF227118ED50010787D /* Assets.xcassets */; };
 		75093DF627118ED50010787D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75093DF427118ED50010787D /* LaunchScreen.storyboard */; };
 		75093E00271192910010787D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75093DFF271192910010787D /* GoogleService-Info.plist */; };
+		7584853A2711BFB100B1D4C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758485392711BFB100B1D4C9 /* SignUpViewController.swift */; };
+		7584853C2711BFC500B1D4C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584853B2711BFC500B1D4C9 /* LoginViewController.swift */; };
+		7584853E2711C16A00B1D4C9 /* FirebaseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7584853D2711C16A00B1D4C9 /* FirebaseUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		75093DF527118ED50010787D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75093DF727118ED50010787D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75093DFF271192910010787D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		758485392711BFB100B1D4C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7584853B2711BFC500B1D4C9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7584853D2711C16A00B1D4C9 /* FirebaseUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtil.swift; sourceTree = "<group>"; };
 		D90F89FA49CC995DDF0641E5 /* Pods-FirebaseCloudFireStorePractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseCloudFireStorePractice.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseCloudFireStorePractice/Pods-FirebaseCloudFireStorePractice.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +56,6 @@
 				D90F89FA49CC995DDF0641E5 /* Pods-FirebaseCloudFireStorePractice.debug.xcconfig */,
 				4E138FE3EB8CB1B9F596AB47 /* Pods-FirebaseCloudFireStorePractice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,6 +88,9 @@
 				75093DF427118ED50010787D /* LaunchScreen.storyboard */,
 				75093DF727118ED50010787D /* Info.plist */,
 				75093DFF271192910010787D /* GoogleService-Info.plist */,
+				758485392711BFB100B1D4C9 /* SignUpViewController.swift */,
+				7584853B2711BFC500B1D4C9 /* LoginViewController.swift */,
+				7584853D2711C16A00B1D4C9 /* FirebaseUtil.swift */,
 			);
 			path = FirebaseCloudFireStorePractice;
 			sourceTree = "<group>";
@@ -213,6 +221,9 @@
 			files = (
 				75093DEE27118ED10010787D /* ViewController.swift in Sources */,
 				75093DEA27118ED10010787D /* AppDelegate.swift in Sources */,
+				7584853A2711BFB100B1D4C9 /* SignUpViewController.swift in Sources */,
+				7584853C2711BFC500B1D4C9 /* LoginViewController.swift in Sources */,
+				7584853E2711C16A00B1D4C9 /* FirebaseUtil.swift in Sources */,
 				75093DEC27118ED10010787D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
