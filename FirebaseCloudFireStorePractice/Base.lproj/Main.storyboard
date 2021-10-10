@@ -163,9 +163,44 @@
                     <view key="view" contentMode="scaleToFill" id="I6D-ah-z3r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="投稿内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpN-ha-pg5">
+                                <rect key="frame" x="100" y="91" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="投稿ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mrb-1e-5Rf">
+                                <rect key="frame" x="100" y="175" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIV-SZ-DwW">
+                                <rect key="frame" x="100" y="259" width="214" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="投稿"/>
+                                <connections>
+                                    <action selector="postButtonDidTap:" destination="eq3-oZ-ebO" eventType="touchUpInside" id="DYB-Aa-6hO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="57i-iV-GR6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="mrb-1e-5Rf" firstAttribute="top" secondItem="fpN-ha-pg5" secondAttribute="bottom" constant="50" id="ENQ-LF-EUy"/>
+                            <constraint firstItem="mrb-1e-5Rf" firstAttribute="centerX" secondItem="57i-iV-GR6" secondAttribute="centerX" id="P0Z-Sn-7p3"/>
+                            <constraint firstItem="CIV-SZ-DwW" firstAttribute="centerX" secondItem="57i-iV-GR6" secondAttribute="centerX" id="Yib-Iv-qRH"/>
+                            <constraint firstItem="fpN-ha-pg5" firstAttribute="leading" secondItem="57i-iV-GR6" secondAttribute="leading" constant="100" id="bo1-gm-79i"/>
+                            <constraint firstItem="mrb-1e-5Rf" firstAttribute="leading" secondItem="fpN-ha-pg5" secondAttribute="leading" id="c5b-CH-uxJ"/>
+                            <constraint firstItem="fpN-ha-pg5" firstAttribute="centerX" secondItem="57i-iV-GR6" secondAttribute="centerX" id="d5k-7J-T7g"/>
+                            <constraint firstItem="fpN-ha-pg5" firstAttribute="top" secondItem="57i-iV-GR6" secondAttribute="top" constant="47" id="eSz-Tz-dUd"/>
+                            <constraint firstItem="CIV-SZ-DwW" firstAttribute="top" secondItem="mrb-1e-5Rf" secondAttribute="bottom" constant="50" id="kyW-eg-XVR"/>
+                            <constraint firstItem="CIV-SZ-DwW" firstAttribute="leading" secondItem="mrb-1e-5Rf" secondAttribute="leading" id="yJQ-rF-VJ1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="postIdTextField" destination="mrb-1e-5Rf" id="ETf-hB-gJH"/>
+                        <outlet property="postTextField" destination="fpN-ha-pg5" id="fWa-aA-3O8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbA-H8-4gq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,6 +213,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -9,11 +9,17 @@ import UIKit
 
 final class CloudFireStoreTestViewController: UIViewController {
 
+    @IBOutlet private weak var postTextField: UITextField!
+    @IBOutlet private weak var postIdTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
+    @IBAction func postButtonDidTap(_ sender: Any) {
+        
+    }
 }
 
 extension CloudFireStoreTestViewController {
