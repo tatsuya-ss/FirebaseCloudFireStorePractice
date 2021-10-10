@@ -37,4 +37,20 @@ final class FirebaseUtil {
         
     }
     
+    func save(post: String, postId: String) {
+        guard let user = Auth.auth().currentUser else { return }
+        let storeRef = Firestore.firestore().collection("users/\(user.uid)/posts/")
+        let createdTime = FieldValue.serverTimestamp()
+        let postData: [String: Any] = ["id": postId,
+                                       "post": post,
+                                       "createdAt": createdTime]
+        storeRef.addDocument(data: postData) { error in
+            if let error = error {
+                print(error)
+            } else {
+                print("保存できました。")
+            }
+        }
+    }
+    
 }
