@@ -25,9 +25,11 @@ final class LoginViewController: UIViewController {
             case .failure(let error):
                 print(error)
             case .success():
-                let testVC = CloudFireStoreTestViewController.instantiate()
-                testVC.modalPresentationStyle = .fullScreen
-                self?.present(testVC, animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    let testVC = CloudFireStoreTestViewController.instantiate()
+                    testVC.modalPresentationStyle = .fullScreen
+                    self?.present(testVC, animated: true, completion: nil)
+                }
             }
         }
     }
