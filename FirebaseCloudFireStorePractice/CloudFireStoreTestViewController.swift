@@ -22,9 +22,29 @@ final class CloudFireStoreTestViewController: UIViewController {
               let postId = postIdTextField.text else { return }
         FirebaseUtil().save(post: post, postId: postId)
     }
+    
     @IBAction private func postDocumentIdButtonDidTap(_ sender: Any) {
         guard let post = postTextField.text else { return }
-        FirebaseUtil().saveDocument(post: post)
+        let firebaseUtil = FirebaseUtil()
+        let postId = UUID().uuidString
+        firebaseUtil.save(post: post, postId: postId)
+        
+        let image = UIImage(named: "pasta")
+        guard let data = image?.pngData() else { return }
+        firebaseUtil.saveStorage(postId: postId, data: data) { result in
+            switch result {
+            case .success(.resume):
+                print("resume")
+            case .success(.pause):
+                print("pause")
+            case .success(.progress(let percent)):
+                print(String(percent))
+            case .success(.success):
+                print("写真の保存できました。")
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
