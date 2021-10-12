@@ -85,15 +85,15 @@
 				75093DE927118ED10010787D /* AppDelegate.swift */,
 				75093DEB27118ED10010787D /* SceneDelegate.swift */,
 				75093DED27118ED10010787D /* ViewController.swift */,
+				758485392711BFB100B1D4C9 /* SignUpViewController.swift */,
+				7584853B2711BFC500B1D4C9 /* LoginViewController.swift */,
+				7584853F2711C88600B1D4C9 /* CloudFireStoreTestViewController.swift */,
 				75093DEF27118ED10010787D /* Main.storyboard */,
 				75093DF227118ED50010787D /* Assets.xcassets */,
 				75093DF427118ED50010787D /* LaunchScreen.storyboard */,
 				75093DF727118ED50010787D /* Info.plist */,
 				75093DFF271192910010787D /* GoogleService-Info.plist */,
-				758485392711BFB100B1D4C9 /* SignUpViewController.swift */,
-				7584853B2711BFC500B1D4C9 /* LoginViewController.swift */,
 				7584853D2711C16A00B1D4C9 /* FirebaseUtil.swift */,
-				7584853F2711C88600B1D4C9 /* CloudFireStoreTestViewController.swift */,
 			);
 			path = FirebaseCloudFireStorePractice;
 			sourceTree = "<group>";
