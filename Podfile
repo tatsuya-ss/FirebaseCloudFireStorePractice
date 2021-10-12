@@ -10,7 +10,7 @@ pod 'Firebase/Firestore'
 # Optionally, include the Swift extensions if you're using Swift.
 pod 'FirebaseFirestoreSwift'
 pod 'Firebase/Auth'
-
+pod 'Firebase/Storage'
 
   # Pods for FirebaseCloudFireStorePractice
 
