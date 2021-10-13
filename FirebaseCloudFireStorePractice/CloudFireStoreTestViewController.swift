@@ -17,12 +17,6 @@ final class CloudFireStoreTestViewController: UIViewController {
 
     }
     
-    @IBAction private func postButtonDidTap(_ sender: Any) {
-        guard let post = postTextField.text,
-              let postId = postIdTextField.text else { return }
-        FirebaseUtil().save(post: post, postId: postId)
-    }
-    
     @IBAction private func postDocumentIdButtonDidTap(_ sender: Any) {
         guard let post = postTextField.text else { return }
         let firebaseUtil = FirebaseUtil()

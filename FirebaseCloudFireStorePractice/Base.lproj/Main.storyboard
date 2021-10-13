@@ -174,18 +174,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIV-SZ-DwW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8l-zd-Aj3">
                                 <rect key="frame" x="100" y="259" width="214" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="投稿"/>
-                                <connections>
-                                    <action selector="postButtonDidTap:" destination="eq3-oZ-ebO" eventType="touchUpInside" id="DYB-Aa-6hO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8l-zd-Aj3">
-                                <rect key="frame" x="100" y="340" width="214" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="ドキュメントIDで保存"/>
                                 <connections>
                                     <action selector="postDocumentIdButtonDidTap:" destination="eq3-oZ-ebO" eventType="touchUpInside" id="oSx-FR-0Yf"/>
                                 </connections>
@@ -194,18 +186,15 @@
                         <viewLayoutGuide key="safeArea" id="57i-iV-GR6"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="K8l-zd-Aj3" firstAttribute="top" secondItem="CIV-SZ-DwW" secondAttribute="bottom" constant="50" id="9P5-kM-oG4"/>
+                            <constraint firstItem="K8l-zd-Aj3" firstAttribute="leading" secondItem="fpN-ha-pg5" secondAttribute="leading" id="6tR-Dl-oNI"/>
                             <constraint firstItem="mrb-1e-5Rf" firstAttribute="top" secondItem="fpN-ha-pg5" secondAttribute="bottom" constant="50" id="ENQ-LF-EUy"/>
-                            <constraint firstItem="K8l-zd-Aj3" firstAttribute="leading" secondItem="CIV-SZ-DwW" secondAttribute="leading" id="L8m-e6-gj0"/>
+                            <constraint firstItem="K8l-zd-Aj3" firstAttribute="top" secondItem="mrb-1e-5Rf" secondAttribute="bottom" constant="50" id="Fds-tj-OEc"/>
                             <constraint firstItem="mrb-1e-5Rf" firstAttribute="centerX" secondItem="57i-iV-GR6" secondAttribute="centerX" id="P0Z-Sn-7p3"/>
-                            <constraint firstItem="CIV-SZ-DwW" firstAttribute="centerX" secondItem="57i-iV-GR6" secondAttribute="centerX" id="Yib-Iv-qRH"/>
                             <constraint firstItem="K8l-zd-Aj3" firstAttribute="centerX" secondItem="57i-iV-GR6" secondAttribute="centerX" id="aJx-tf-LJ7"/>
                             <constraint firstItem="fpN-ha-pg5" firstAttribute="leading" secondItem="57i-iV-GR6" secondAttribute="leading" constant="100" id="bo1-gm-79i"/>
                             <constraint firstItem="mrb-1e-5Rf" firstAttribute="leading" secondItem="fpN-ha-pg5" secondAttribute="leading" id="c5b-CH-uxJ"/>
                             <constraint firstItem="fpN-ha-pg5" firstAttribute="centerX" secondItem="57i-iV-GR6" secondAttribute="centerX" id="d5k-7J-T7g"/>
                             <constraint firstItem="fpN-ha-pg5" firstAttribute="top" secondItem="57i-iV-GR6" secondAttribute="top" constant="47" id="eSz-Tz-dUd"/>
-                            <constraint firstItem="CIV-SZ-DwW" firstAttribute="top" secondItem="mrb-1e-5Rf" secondAttribute="bottom" constant="50" id="kyW-eg-XVR"/>
-                            <constraint firstItem="CIV-SZ-DwW" firstAttribute="leading" secondItem="mrb-1e-5Rf" secondAttribute="leading" id="yJQ-rF-VJ1"/>
                         </constraints>
                     </view>
                     <connections>
