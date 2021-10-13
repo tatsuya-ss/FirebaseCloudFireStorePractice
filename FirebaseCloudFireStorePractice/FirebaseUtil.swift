@@ -38,7 +38,8 @@ final class FirebaseUtil {
         
     }
     
-    func save(post: String, postId: String) {
+    func save(post: String, postId: String,
+              completion: @escaping (Result<Any?, Error>) -> Void) {
         guard let user = Auth.auth().currentUser else { return }
         let storeRef = Firestore.firestore().collection("users/\(user.uid)/posts/")
         let createdTime = FieldValue.serverTimestamp()
@@ -47,9 +48,10 @@ final class FirebaseUtil {
                                        "createdAt": createdTime]
         storeRef.addDocument(data: postData) { error in
             if let error = error {
+                completion(.failure(error))
                 print(error)
             } else {
-                print("投稿を保存できました。")
+                completion(.success(nil))
             }
         }
     }

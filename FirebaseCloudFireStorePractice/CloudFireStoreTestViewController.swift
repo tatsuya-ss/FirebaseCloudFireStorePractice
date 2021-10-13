@@ -21,7 +21,14 @@ final class CloudFireStoreTestViewController: UIViewController {
         guard let post = postTextField.text else { return }
         let firebaseUtil = FirebaseUtil()
         let postId = UUID().uuidString
-        firebaseUtil.save(post: post, postId: postId)
+        firebaseUtil.save(post: post, postId: postId) { result in
+            switch result {
+            case .success:
+                print("保存完了")
+            case .failure(let error):
+                print(error)
+            }
+        }
         
         let image = UIImage(named: "pasta")
         guard let data = image?.pngData() else { return }
