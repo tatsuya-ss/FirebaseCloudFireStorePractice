@@ -59,7 +59,8 @@ final class FirebaseUtil {
     func saveStorage(postId: String,
                      data: Data,
                      completion: @escaping (Result<StorageStatus, Error>) -> Void) {
-        let photosRef = Storage.storage().reference().child("photos/\(postId).jpg")
+        guard let user = Auth.auth().currentUser else { return }
+        let photosRef = Storage.storage().reference().child("users/\(user.uid)/posts/\(postId).jpg")
         let uploadTask = photosRef.putData(data,
                                            metadata: nil) { metadata, error in
             guard let metadata = metadata else {
