@@ -11,7 +11,10 @@ final class CloudFireStoreTestViewController: UIViewController {
     
     @IBOutlet private weak var postTextField: UITextField!
     @IBOutlet private weak var postIdTextField: UITextField!
+    @IBOutlet weak var fetchImage: UIImageView!
     
+    let postId = UUID().uuidString
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +23,7 @@ final class CloudFireStoreTestViewController: UIViewController {
     @IBAction private func postDocumentIdButtonDidTap(_ sender: Any) {
         guard let post = postTextField.text,
               let data = UIImage(named: "pasta")?.pngData() else { return }
-        let postId = UUID().uuidString
+//        let postId = UUID().uuidString
         
         let dispatchGroup = DispatchGroup()
         dispatchGroup.enter()
@@ -52,6 +55,17 @@ final class CloudFireStoreTestViewController: UIViewController {
         }
         dispatchGroup.notify(queue: .main) {
             print("全ての保存完了")
+        }
+    }
+    
+    @IBAction private func fetchButtonDidTapped(_ sender: Any) {
+        FirebaseUtil().fetchLocal(id: postId) { result in
+            switch result {
+            case .failure(let error): print(error)
+            case .success(let url):
+                guard let fileContents = try? Data(contentsOf: url) else { fatalError() }
+                self.fetchImage.image = UIImage(data: fileContents)
+            }
         }
     }
     

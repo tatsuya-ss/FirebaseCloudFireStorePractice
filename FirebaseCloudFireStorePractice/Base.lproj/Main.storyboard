@@ -182,6 +182,20 @@
                                     <action selector="postDocumentIdButtonDidTap:" destination="eq3-oZ-ebO" eventType="touchUpInside" id="oSx-FR-0Yf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Od-ss-FKu">
+                                <rect key="frame" x="100" y="337" width="214" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="取得"/>
+                                <connections>
+                                    <action selector="fetchButtonDidTapped:" destination="eq3-oZ-ebO" eventType="touchUpInside" id="Au7-XK-WVi"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Sj-gc-zzI">
+                                <rect key="frame" x="146" y="400" width="122" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5Sj-gc-zzI" secondAttribute="height" multiplier="1:1" id="4b8-8f-rS1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="57i-iV-GR6"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -189,22 +203,29 @@
                             <constraint firstItem="K8l-zd-Aj3" firstAttribute="leading" secondItem="fpN-ha-pg5" secondAttribute="leading" id="6tR-Dl-oNI"/>
                             <constraint firstItem="mrb-1e-5Rf" firstAttribute="top" secondItem="fpN-ha-pg5" secondAttribute="bottom" constant="50" id="ENQ-LF-EUy"/>
                             <constraint firstItem="K8l-zd-Aj3" firstAttribute="top" secondItem="mrb-1e-5Rf" secondAttribute="bottom" constant="50" id="Fds-tj-OEc"/>
+                            <constraint firstItem="3Od-ss-FKu" firstAttribute="top" secondItem="K8l-zd-Aj3" secondAttribute="bottom" constant="47" id="Mmp-Vr-bxh"/>
                             <constraint firstItem="mrb-1e-5Rf" firstAttribute="centerX" secondItem="57i-iV-GR6" secondAttribute="centerX" id="P0Z-Sn-7p3"/>
+                            <constraint firstItem="3Od-ss-FKu" firstAttribute="centerX" secondItem="K8l-zd-Aj3" secondAttribute="centerX" id="TvT-Fu-Ong"/>
+                            <constraint firstItem="5Sj-gc-zzI" firstAttribute="centerX" secondItem="3Od-ss-FKu" secondAttribute="centerX" id="Ze7-IV-02O"/>
                             <constraint firstItem="K8l-zd-Aj3" firstAttribute="centerX" secondItem="57i-iV-GR6" secondAttribute="centerX" id="aJx-tf-LJ7"/>
                             <constraint firstItem="fpN-ha-pg5" firstAttribute="leading" secondItem="57i-iV-GR6" secondAttribute="leading" constant="100" id="bo1-gm-79i"/>
                             <constraint firstItem="mrb-1e-5Rf" firstAttribute="leading" secondItem="fpN-ha-pg5" secondAttribute="leading" id="c5b-CH-uxJ"/>
+                            <constraint firstItem="5Sj-gc-zzI" firstAttribute="top" secondItem="3Od-ss-FKu" secondAttribute="bottom" constant="32" id="cDm-Q1-JCQ"/>
+                            <constraint firstItem="5Sj-gc-zzI" firstAttribute="height" secondItem="I6D-ah-z3r" secondAttribute="height" multiplier="0.136161" id="cu9-3y-8ik"/>
                             <constraint firstItem="fpN-ha-pg5" firstAttribute="centerX" secondItem="57i-iV-GR6" secondAttribute="centerX" id="d5k-7J-T7g"/>
                             <constraint firstItem="fpN-ha-pg5" firstAttribute="top" secondItem="57i-iV-GR6" secondAttribute="top" constant="47" id="eSz-Tz-dUd"/>
+                            <constraint firstItem="3Od-ss-FKu" firstAttribute="leading" secondItem="K8l-zd-Aj3" secondAttribute="leading" id="ucN-6I-a3b"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fetchImage" destination="5Sj-gc-zzI" id="zgC-cD-jbs"/>
                         <outlet property="postIdTextField" destination="mrb-1e-5Rf" id="ETf-hB-gJH"/>
                         <outlet property="postTextField" destination="fpN-ha-pg5" id="fWa-aA-3O8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbA-H8-4gq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2014" y="200"/>
+            <point key="canvasLocation" x="2013.0434782608697" y="199.55357142857142"/>
         </scene>
     </scenes>
     <resources>

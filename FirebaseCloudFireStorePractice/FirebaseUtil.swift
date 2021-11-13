@@ -99,6 +99,28 @@ final class FirebaseUtil {
         }
     }
     
+    func fetchLocal(id: String, completion: @escaping (Result<URL, Error>) -> Void) {
+        guard let user = Auth.auth().currentUser else { return }
+        let photosRef = Storage.storage().reference().child("users/\(user.uid)/posts/\(id).jpg")
+        
+        let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory,
+                                                       .userDomainMask,
+                                                       true)[0]
+        let photoName = "\(id).jpg"
+        let cachesURL = URL(fileURLWithPath: "\(path)/\(photoName)")
+        print(cachesURL)
+        // file:///var/mobile/Containers/Data/Application/DC6ED900-D31C-48AC-A18D-D372A41DE7A5/Library/Caches/F0F30DC2-0770-487C-9539-BD3F075F9E73.jpg
+
+        let downloadTask = photosRef.write(toFile: cachesURL) { url, error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(cachesURL))
+            }
+        }
+        downloadTask.resume()
+    }
+    
 }
 
 enum StorageStatus {
