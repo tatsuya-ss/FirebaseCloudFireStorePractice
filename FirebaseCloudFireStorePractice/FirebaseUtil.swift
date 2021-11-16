@@ -24,6 +24,10 @@ final class FirebaseUtil {
         }
     }
     
+    func logInAsync(email: String, password: String) async throws {
+        try await Auth.auth().signIn(withEmail: email, password: password)
+    }
+    
     func logIn(email: String,
                password: String,
                completion: @escaping (Result<Void, Error>) -> Void) {

@@ -20,16 +20,17 @@ final class LoginViewController: UIViewController {
     @IBAction private func loginButtonDidTap(_ sender: Any) {
         guard let email = mainAddressTextField.text,
               let password = passWordTextField.text else { return }
-        FirebaseUtil().logIn(email: email, password: password) { [weak self] result in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case .success():
-                DispatchQueue.main.async {
+        Task {
+            do {
+                try await FirebaseUtil().logInAsync(email: email, password: password)
+                // MARK: - awaitを使ってるので処理が一時停止（サスペンションポイント）
+                await MainActor.run {
                     let testVC = CloudFireStoreTestViewController.instantiate()
                     testVC.modalPresentationStyle = .fullScreen
-                    self?.present(testVC, animated: true, completion: nil)
+                    self.present(testVC, animated: true, completion: nil)
                 }
+            } catch {
+                print(error)
             }
         }
     }
