@@ -64,7 +64,7 @@ final class FirebaseUtil {
                      data: Data,
                      completion: @escaping (Result<StorageStatus, Error>) -> Void) {
         guard let user = Auth.auth().currentUser else { return }
-        let photosRef = Storage.storage().reference().child("users/\(user.uid)/posts/\(postId).jpg")
+        let photosRef = Storage.storage().reference().child("users/\(user.uid)/posts/\(postId).jpeg")
         let uploadTask = photosRef.putData(data,
                                            metadata: nil) { metadata, error in
             guard let metadata = metadata else {
@@ -105,12 +105,12 @@ final class FirebaseUtil {
     
     func fetchLocal(id: String, completion: @escaping (Result<URL, Error>) -> Void) {
         guard let user = Auth.auth().currentUser else { return }
-        let photosRef = Storage.storage().reference().child("users/\(user.uid)/posts/\(id).jpg")
+        let photosRef = Storage.storage().reference().child("users/\(user.uid)/posts/\(id).jpeg")
         
         let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory,
                                                        .userDomainMask,
                                                        true)[0]
-        let photoName = "\(id).jpg"
+        let photoName = "\(id).jpeg"
         let cachesURL = URL(fileURLWithPath: "\(path)/\(photoName)")
         print(cachesURL)
         // file:///var/mobile/Containers/Data/Application/DC6ED900-D31C-48AC-A18D-D372A41DE7A5/Library/Caches/F0F30DC2-0770-487C-9539-BD3F075F9E73.jpg

@@ -11,19 +11,20 @@ final class CloudFireStoreTestViewController: UIViewController {
     
     @IBOutlet private weak var postTextField: UITextField!
     @IBOutlet private weak var postIdTextField: UITextField!
-    @IBOutlet weak var fetchImage: UIImageView!
+    @IBOutlet private weak var fetchImage: UIImageView!
+    @IBOutlet private weak var baforeImage: UIImageView!
     
     let postId = UUID().uuidString
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        baforeImage.image = UIImage(named: "pasta")
     }
     
     @IBAction private func postDocumentIdButtonDidTap(_ sender: Any) {
         guard let post = postTextField.text,
-              let data = UIImage(named: "pasta")?.pngData() else { return }
-//        let postId = UUID().uuidString
+              // 0.1でも0.01でも45.05kbから下がらない
+              let data = UIImage(named: "pasta")?.jpegData(compressionQuality: 0.1) else { return }
         
         let dispatchGroup = DispatchGroup()
         dispatchGroup.enter()
@@ -61,8 +62,10 @@ final class CloudFireStoreTestViewController: UIViewController {
     @IBAction private func fetchButtonDidTapped(_ sender: Any) {
         FirebaseUtil().fetchLocal(id: postId) { result in
             switch result {
-            case .failure(let error): print(error)
+            case .failure(let error):
+                print(error)
             case .success(let url):
+                // 1.3mbから45.05kbで取得できた。
                 guard let fileContents = try? Data(contentsOf: url) else { fatalError() }
                 self.fetchImage.image = UIImage(data: fileContents)
             }
